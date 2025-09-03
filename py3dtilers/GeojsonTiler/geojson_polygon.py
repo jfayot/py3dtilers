@@ -39,8 +39,7 @@ class GeojsonPolygon(Geojson):
             ]
 
             if is_roof:
-                for coord in exterior_ring:
-                    self.adjust_height(coord, self.height)
+                self.adjust_height(exterior_ring, self.height)
                 for coord in interior_rings:
                     self.adjust_height(coord, self.height)
 
